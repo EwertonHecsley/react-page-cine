@@ -1,0 +1,202 @@
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+
+  @media (max-width: 1024px) {
+    height: auto;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+
+  .boxLogo {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 5rem;
+
+    @media (max-width: 1024px) {
+      width: auto;
+      padding-left: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      padding-left: 0;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: #ffa634;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      opacity: 0.7;
+
+      @media (max-width: 1024px) {
+        font-size: 2.1rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .boxNav {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding-right: 1rem;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      width: 40%;
+    }
+
+    @media (max-width: 768px) {
+      width: auto;
+    }
+
+    //BOTÃO HAMBÚRGUER
+    .menuToggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.25rem;
+      width: 2rem;
+      height: 2rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 3;
+
+      span {
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      @media (max-width: 768px) {
+        display: flex; // mobile: aparece
+      }
+    }
+
+    // Animação simples do ícone quando aberto
+    .menuToggleOpen {
+      span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+
+    nav {
+      @media (max-width: 768px) {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+
+        @media (max-width: 1024px) {
+          gap: 2rem;
+        }
+
+        li {
+          a {
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            opacity: 0.8;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 1;
+              color: #ffa634;
+            }
+
+            @media (max-width: 1024px) {
+              font-size: 1rem;
+            }
+          }
+
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            @media (max-width: 1024px) {
+              width: 1.3rem;
+              height: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+
+    
+    .navOpen {
+      @media (max-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 0.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 0.5rem;
+        padding: 1rem 1.5rem;
+        z-index: 2;
+      }
+
+      ul {
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+
+        li {
+          @media (max-width: 768px) {
+            width: 100%;
+          }
+
+          a {
+            @media (max-width: 768px) {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
