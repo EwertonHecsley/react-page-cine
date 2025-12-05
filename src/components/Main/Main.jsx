@@ -15,14 +15,14 @@ export const Main = () => {
                     <button>Assistir agora</button>
                 </section>
                 <section className={s.boxMainCards}>
-                   {moviesList.map((movie)=>(
-                    <Card 
-                    key={movie.id}
-                    title={movie.title}
-                    genre={movie.genre}
-                    background={movie.background}
-                    />
-                   ))}
+                    {moviesList.map((movie) => (
+                        <Card
+                            key={movie.id}
+                            title={movie.title}
+                            genre={movie.genre}
+                            background={movie.background}
+                        />
+                    ))}
                 </section>
             </section>
         </main>
